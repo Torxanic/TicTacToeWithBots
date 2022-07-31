@@ -43,5 +43,41 @@ namespace TTT_Test
 
             Assert.AreEqual(expected, result, "Account not debited correctly");
         }
+
+        [TestMethod]
+        public void testHeuristic()
+        {
+            GreedySearch greedy = new GreedySearch(new TTTGoalCheck());
+            char[,] raster = { { 'X', ' ', 'X' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
+            char[,] raster1 = 
+                { 
+                                { 'X', 'X', 'X' }, 
+                                { 'O', ' ', 'O' }, 
+                                { ' ', ' ', ' ' } 
+                };
+            char[,] raster2 = 
+                { 
+                    { 'O', 'O', 'X' }, 
+                    { ' ', 'X', ' ' }, 
+                    { 'X', 'O', 'O' } 
+                };
+            char[,] raster3 = 
+                { 
+                    { 'O', 'X', 'X' }, 
+                    { 'O', 'X', ' ' }, 
+                    { 'O', ' ', 'O' } 
+                };
+
+            int result = greedy.heuristicFunktion(raster1, 'X');
+            int result1 = greedy.heuristicFunktion(raster, 'X');
+            int result2 = greedy.heuristicFunktion(raster2, 'X');
+            int result3 = greedy.heuristicFunktion(raster3, 'O');
+            int expected = 100;
+
+            Assert.AreEqual(100, result, "Null");
+            Assert.AreEqual(expected, result3, "Account not debited correctly");
+            Assert.AreEqual(0, result1, "Account not debited correctly");
+            Assert.AreEqual(expected, result2, "Account not debited correctly");
+        }
     }
 }

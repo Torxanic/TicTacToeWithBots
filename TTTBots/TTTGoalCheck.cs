@@ -6,6 +6,7 @@
         {
             char[,] tempRaster = node.value as char[,];
 
+
             if (!char.IsWhiteSpace(tempRaster[1, 1]) && tempRaster[1, 1] == CurrentPlayer)
             {
                 if (tempRaster[1, 1] == tempRaster[1, 0] && tempRaster[1, 1] == tempRaster[1, 2])

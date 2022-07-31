@@ -37,6 +37,8 @@
             this.rotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newBotGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.depthSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.breathSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.A1 = new System.Windows.Forms.Button();
@@ -51,8 +53,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.breathSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.depthSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greedySearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,11 +131,26 @@
             // 
             this.newBotGameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.depthSearchToolStripMenuItem,
-            this.breathSearchToolStripMenuItem});
+            this.breathSearchToolStripMenuItem,
+            this.greedySearchToolStripMenuItem});
             this.newBotGameToolStripMenuItem.Name = "newBotGameToolStripMenuItem";
             this.newBotGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newBotGameToolStripMenuItem.Text = "New Bot Game";
             this.newBotGameToolStripMenuItem.Click += new System.EventHandler(this.newBotGameToolStripMenuItem_Click_1);
+            // 
+            // depthSearchToolStripMenuItem
+            // 
+            this.depthSearchToolStripMenuItem.Name = "depthSearchToolStripMenuItem";
+            this.depthSearchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.depthSearchToolStripMenuItem.Text = "DepthSearch";
+            this.depthSearchToolStripMenuItem.Click += new System.EventHandler(this.depthSearchToolStripMenuItem_Click);
+            // 
+            // breathSearchToolStripMenuItem
+            // 
+            this.breathSearchToolStripMenuItem.Name = "breathSearchToolStripMenuItem";
+            this.breathSearchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.breathSearchToolStripMenuItem.Text = "BreathSearch";
+            this.breathSearchToolStripMenuItem.Click += new System.EventHandler(this.breathSearchToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -266,19 +282,12 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "label2";
             // 
-            // breathSearchToolStripMenuItem
+            // greedySearchToolStripMenuItem
             // 
-            this.breathSearchToolStripMenuItem.Name = "breathSearchToolStripMenuItem";
-            this.breathSearchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.breathSearchToolStripMenuItem.Text = "BreathSearch";
-            this.breathSearchToolStripMenuItem.Click += new System.EventHandler(this.breathSearchToolStripMenuItem_Click);
-            // 
-            // depthSearchToolStripMenuItem
-            // 
-            this.depthSearchToolStripMenuItem.Name = "depthSearchToolStripMenuItem";
-            this.depthSearchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.depthSearchToolStripMenuItem.Text = "DepthSearch";
-            this.depthSearchToolStripMenuItem.Click += new System.EventHandler(this.depthSearchToolStripMenuItem_Click);
+            this.greedySearchToolStripMenuItem.Name = "greedySearchToolStripMenuItem";
+            this.greedySearchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.greedySearchToolStripMenuItem.Text = "GreedySearch";
+            this.greedySearchToolStripMenuItem.Click += new System.EventHandler(this.greedySearchToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -338,6 +347,7 @@
         private System.Windows.Forms.ToolStripMenuItem newBotGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem breathSearchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem depthSearchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem greedySearchToolStripMenuItem;
     }
 }
 

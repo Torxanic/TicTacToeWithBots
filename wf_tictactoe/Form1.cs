@@ -310,5 +310,10 @@ namespace wf_tictactoe
             Bot = new Bot() { SearchStrategy = Strategy };
             isBotActive = true;
         }
+
+        private void greedySearchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            createBotGame(new GreedySearch(new TTTGoalCheck()));
+        }
     }
 }
